@@ -12,4 +12,8 @@ export class DashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  load(output: string){
+    console.log(output);
+  }
+
 }
