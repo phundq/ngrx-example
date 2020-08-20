@@ -1,3 +1,6 @@
+import { getLoginInfo } from './../../store/selectors/auth.selector';
+import { AppState } from './../../store/app-state';
+import { Store } from '@ngrx/store';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderLayoutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store<AppState>) {
+    this.store.select(getLoginInfo).subscribe(x => {
+      this.username = x.username;
+    })
+   }
+
+  username: string = '';
 
   ngOnInit(): void {
   }

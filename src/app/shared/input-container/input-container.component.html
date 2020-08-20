@@ -1,0 +1,27 @@
+<style>
+    .input-container {
+        width: 100%;
+        padding: 10px 0px;
+    }
+
+    .ilabel {
+        width: 25%;
+        display: inline-block;
+       
+    }
+
+    .iinput {
+        width: 75%;
+        padding: 5px 20px;
+        border-radius: 5px;
+        border: 1px solid rgb(154 152 152);
+       
+    }
+</style>
+<div class="input-container">
+    <div style="margin-left: auto; margin-right: auto; display: flex; width: 90%; align-items: center;">
+        <label class="ilabel">{{label}}: </label>
+        <input class="iinput" type={{type}} name= {{name}} [(ngModel)]="value" (keyup)="onChangeInput($event)"
+            (change)="onChangeInput($event)">
+    </div>
+</div>

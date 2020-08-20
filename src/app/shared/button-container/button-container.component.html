@@ -1,1 +1,12 @@
-<p>button-container works  â!</p>
+<style>
+    .button-container {
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: 1px solid #414141;
+        background: rgba(184, 228, 207, 0.333);
+    }
+</style>
+
+<button class="button-container"
+    (click) = "submit.emit()"
+>{{text}}</button>
