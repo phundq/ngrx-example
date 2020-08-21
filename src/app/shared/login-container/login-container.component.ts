@@ -9,6 +9,8 @@ export class LoginContainerComponent implements OnInit {
 
   
   @Input() fail: boolean;
+  @Input() success: boolean;
+  @Input() login: boolean;
   @Output() submitForm = new EventEmitter<any>();
   @Output() hideMessage = new EventEmitter<any>();  
 

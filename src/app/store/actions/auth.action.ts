@@ -9,11 +9,11 @@ export enum AuthActionE{
 
 export class Login implements Action{
     public readonly type = AuthActionE.LOGIN
-    constructor(){}
+    constructor(public payload: {username: string, password: string}){}
 }
 export class LoginSuccess implements Action{
     public readonly type = AuthActionE.LOGIN_SUCCESS
-    constructor(public payload: {username: string, password: string}){}
+    constructor(public payload: {fullName: string, username: string}){}
 }
 export class LoginFail implements Action{
     public readonly type = AuthActionE.LOGIN_FAIL

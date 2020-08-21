@@ -9,10 +9,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderLayoutComponent } from './layouts/header-layout/header-layout.component';
 import { ContentLayoutComponent } from './layouts/content-layout/content-layout.component';
-import { StoreModule } from '@ngrx/store';
 import { SharedModule } from './shared/shared.module';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,6 +28,7 @@ import { environment } from '../environments/environment';
     AuthModule,
     SharedModule,
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
+    HttpClientModule,
     
   ],
   providers: [],

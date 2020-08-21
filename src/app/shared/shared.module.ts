@@ -5,11 +5,12 @@ import { CommonModule } from '@angular/common';
 import { ButtonContainerComponent } from './button-container/button-container.component';
 import { InputContainerComponent } from './input-container/input-container.component';
 import { LoginContainerComponent } from './login-container/login-container.component';
+import { LoaderContainerComponent } from './loader-container/loader-container.component';
 
 
 
 @NgModule({
-  declarations: [ButtonContainerComponent, InputContainerComponent, LoginContainerComponent],
+  declarations: [ButtonContainerComponent, InputContainerComponent, LoginContainerComponent, LoaderContainerComponent],
   imports: [
     CommonModule,
     FormsModule
@@ -17,7 +18,8 @@ import { LoginContainerComponent } from './login-container/login-container.compo
   exports:[
     ButtonContainerComponent,
     InputContainerComponent,
-    LoginContainerComponent
+    LoginContainerComponent,
+    LoaderContainerComponent
   ]
 })
 export class SharedModule { }

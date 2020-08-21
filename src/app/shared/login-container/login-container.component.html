@@ -9,7 +9,7 @@
     }
 </style>
 
-<div style="width: 100%; border-radius: 5px; background:rgb(206 206 206);">
+<div style="width: 100%; height: 390px; border-radius: 5px; background:rgb(206 206 206);">
     <div class="message-err" style="text-align: center; margin: 1em;">
         <h2>Login</h2>
     </div>
@@ -20,7 +20,10 @@
     <div class="message-err" style="text-align: center;" *ngIf="fail">
         <p>Username or password invalid</p>
     </div>
-    <div style="text-align: center; padding-top: 1em;  padding-bottom: 1.5em; ">
+    <div *ngIf = "login" style="text-align: center; padding-top: 1em;  padding-bottom: 2.5em; ">
+        <app-loader-container></app-loader-container>
+    </div>
+    <div *ngIf = "login == false" style="text-align: center; padding-top: 1em;  padding-bottom: 1.5em; ">
         <app-button-container [text]="'Submit'" (submit)=handlerSubmit()></app-button-container>
     </div>
 

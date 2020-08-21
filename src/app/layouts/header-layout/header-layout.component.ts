@@ -13,10 +13,12 @@ export class HeaderLayoutComponent implements OnInit {
   constructor(private store: Store<AppState>) {
     this.store.select(getLoginInfo).subscribe(x => {
       this.username = x.username;
+      this.fullName = x.fullName;
     })
    }
 
   username: string = '';
+  fullName: string = '';
 
   ngOnInit(): void {
   }

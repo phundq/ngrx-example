@@ -1,8 +1,7 @@
-
 <p>login works!</p>
 <div style="width: 100vw;">
     <div style="width: 400px; margin: auto; margin-top: 8em ;">
-        <app-login-container  [fail] = "fail" (submitForm) = "submit($event)" (hideMessage) = "fail = false"></app-login-container>
+        <app-login-container [fail]="fail" [success] = "success" [login] = "login" (submitForm)="submit($event)" (hideMessage)="fail = false">
+        </app-login-container>
     </div>
 </div>
-
